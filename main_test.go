@@ -29,8 +29,8 @@ func TestIsLoopback(t *testing.T) {
 
 func TestGetNicsF(t *testing.T) {
 	nics := []net.Interface{
-		net.Interface{Flags: net.FlagUp},
-		net.Interface{Flags: net.FlagLoopback},
+		{Flags: net.FlagUp},
+		{Flags: net.FlagLoopback},
 	}
 	filtered := GetNicsF(nics, IsLoopback)
 
@@ -51,8 +51,8 @@ func TestGetNicsF(t *testing.T) {
 
 func TestGetNicsFF(t *testing.T) {
 	nics := []net.Interface{
-		net.Interface{Flags: net.FlagUp},
-		net.Interface{Flags: net.FlagLoopback},
+		{Flags: net.FlagUp},
+		{Flags: net.FlagLoopback},
 	}
 	filtered := GetNicsFF(nics, IsLoopback)
 
